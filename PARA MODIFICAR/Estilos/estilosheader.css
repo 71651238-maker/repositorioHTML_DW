@@ -1,0 +1,267 @@
+:root {
+    --turquesa: #159baa;
+    --turquesa-oscuro: #08798a;
+    --azul: #164b61;
+    --texto: #263943;
+    --gris: #647780;
+    --borde: #dce8eb;
+    --fondo: #f6fafb
+}
+
+* {
+    box-sizing: border-box
+}
+
+html {
+    scroll-behavior: smooth
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Segoe UI", Verdana, sans-serif;
+    color: var(--texto);
+    background: #fff
+}
+
+.encabezado {
+    background: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 25px;
+    padding: 10px clamp(18px, 5vw, 70px);
+    min-height: 76px;
+    box-shadow: 0 2px 15px rgba(0, 0, 0, .06);
+    position: sticky;
+    top: 0;
+    z-index: 1000
+}
+
+.contenedorLOGO {
+    text-decoration: none;
+    color: inherit;
+    display: flex;
+    align-items: center;
+    flex-shrink: 0
+}
+
+.ubicacionLOGO {
+    display: flex;
+    align-items: center;
+    gap: 10px
+}
+
+.imagenLOGO {
+    height: 49px;
+    width: 49px;
+    object-fit: contain
+}
+
+.nombreLOGO {
+    display: flex;
+    flex-direction: column;
+    line-height: 1.2
+}
+
+.spam1 {
+    color: #607982;
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: .7px
+}
+
+.spam2 {
+    color: var(--azul);
+    font-size: 14px;
+    font-weight: 800;
+    letter-spacing: .2px
+}
+
+.comportamientoMENU {
+    display: flex;
+    align-items: center
+}
+
+.horizontalMENU {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    gap: clamp(14px, 2.2vw, 32px);
+    align-items: center
+}
+
+.opcionMENU {
+    text-decoration: none;
+    color: #34464d;
+    font-size: 13px;
+    font-weight: 600;
+    transition: color .2s
+}
+
+.opcionMENU:hover,
+.opcionMENU.activo {
+    color: var(--turquesa-oscuro)
+}
+
+.accionesHeader {
+    display: flex;
+    align-items: center;
+    gap: 12px
+}
+
+.buscadorHeader {
+    display: flex;
+    align-items: center;
+    border: 1px solid transparent;
+    border-radius: 22px;
+    overflow: hidden;
+    transition: border .2s
+}
+
+.buscadorHeader:focus-within {
+    border-color: var(--borde)
+}
+
+.buscadorHeader input {
+    width: 0;
+    opacity: 0;
+    border: 0;
+    outline: 0;
+    padding: 8px 0;
+    transition: width .25s, opacity .25s
+}
+
+.buscadorHeader.abierto input {
+    width: 150px;
+    opacity: 1;
+    padding: 8px 10px
+}
+
+.buscadorHeader button {
+    border: 0;
+    background: transparent;
+    cursor: pointer;
+    display: grid;
+    place-items: center;
+    padding: 7px;
+    position: relative
+}
+
+.buscadorHeader button img {
+    width: 21px;
+    height: 21px;
+    object-fit: contain
+}
+
+.botonMenuMovil {
+    display: none;
+    background: none;
+    border: 0;
+    padding: 7px;
+    cursor: pointer
+}
+
+.botonMenuMovil span {
+    display: block;
+    width: 23px;
+    height: 2px;
+    background: var(--azul);
+    margin: 5px
+}
+
+@media(max-width:900px) {
+    .encabezado {
+        gap: 12px;
+        padding: 9px 20px
+    }
+
+    .horizontalMENU {
+        gap: 13px
+    }
+
+    .opcionMENU {
+        font-size: 12px
+    }
+
+    .spam2 {
+        font-size: 12px
+    }
+}
+
+@media(max-width:700px) {
+    .encabezado {
+        min-height: 66px;
+        justify-content: space-between
+    }
+
+    .imagenLOGO {
+        width: 41px;
+        height: 41px
+    }
+
+    .spam1 {
+        font-size: 9px
+    }
+
+    .spam2 {
+        font-size: 11px
+    }
+
+    .botonMenuMovil {
+        display: block;
+        order: 3
+    }
+
+    .accionesHeader {
+        margin-left: auto
+    }
+
+    .comportamientoMENU {
+        display: none;
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 66px;
+        background: #fff;
+        padding: 14px 22px 20px;
+        box-shadow: 0 8px 12px #00000012
+    }
+
+    .comportamientoMENU.menuAbierto {
+        display: block
+    }
+
+    .horizontalMENU {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0
+    }
+
+    .horizontalMENU li {
+        border-bottom: 1px solid var(--borde)
+    }
+
+    .opcionMENU {
+        display: block;
+        padding: 12px 4px;
+        font-size: 14px
+    }
+
+    .buscadorHeader.abierto input {
+        width: min(115px, 28vw)
+    }
+}
+
+[hidden] {
+    display: none !important
+}
+
+.soloLectores {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0)
+}

@@ -1,0 +1,20 @@
+FARMACIA VIRGEN INMACULADA - PROTOTIPO WEB (versión sin productos)
+
+ARCHIVOS: index.html, servicios.html
+CARPETAS: Estilos/ (CSS), JS/interacciones.js, Fotos/ (tus imágenes; debes crearla)
+
+IMÁGENES PARA Fotos/
+logo.png, 
+fondoInicio.jpg, 
+lupa.png,-------
+
+cruzAnimada.webp, 
+bannerServicios.jpg----
+
+icono-mision.png, icono-vision.png, icono-historia.png, icono-valores.png, icono-servicio.png, icono-politica.png
+servicio-24horas.png, servicio-delivery.png, servicio-consulta.png, servicio-salud.png, servicio-inyectables.png, servicio-nutricion.png
+
+NOTAS
+- La lupa del menú abre el buscador y filtra las tarjetas de servicios.
+- Los formularios de Inicio y Servicios solo muestran un mensaje local; para recibir datos reales se necesita un backend o servicio de formularios.
+- Textos y horarios son ejemplos editables.

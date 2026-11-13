@@ -1,0 +1,308 @@
+:root {
+    --turquesa: #159baa;
+    --azul: #164b61;
+    --texto: #263943;
+    --gris: #647780;
+    --borde: #dce8eb
+}
+
+.bannerInterno {
+    min-height: 190px;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    background: #277f90;
+    color: white;
+    padding: 30px max(5%, calc((100% - 1180px)/2))
+}
+
+.bannerInterno>img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: .35
+}
+
+.bannerInterno:after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(90deg, #075b70dd, #087e8a55)
+}
+
+.bannerInterno>div {
+    position: relative;
+    z-index: 1;
+    max-width: 600px
+}
+
+.bannerInterno h1 {
+    font-size: 36px;
+    margin: 8px 0
+}
+
+.bannerInterno p {
+    margin: 0;
+    line-height: 1.5
+}
+
+.bannerInterno .miga {
+    font-size: 11px;
+    margin-bottom: 18px
+}
+
+.seccion {
+    width: min(1180px, 90%);
+    margin: 48px auto
+}
+
+.etiqueta {
+    color: #08798a;
+    font-size: 11px;
+    text-transform: uppercase;
+    font-weight: 800;
+    letter-spacing: 1px
+}
+
+.encabezadoSeccion h2,
+.formularioSeccion h2 {
+    font-size: 26px;
+    color: var(--azul);
+    margin: 7px 0
+}
+
+.encabezadoSeccion p,
+.formularioSeccion>div p {
+    font-size: 13px;
+    color: var(--gris);
+    margin: 0 0 22px
+}
+
+.rejillaServicios {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 17px
+}
+
+.tarjetaServicio {
+    border: 1px solid var(--borde);
+    border-radius: 12px;
+    padding: 24px;
+    background: linear-gradient(145deg, #fff, #f5fbfc);
+    box-shadow: 0 4px 15px #164b6108
+}
+
+.tarjetaServicio img {
+    width: 48px;
+    height: 48px;
+    object-fit: contain
+}
+
+.tarjetaServicio h3 {
+    font-size: 16px;
+    color: var(--azul);
+    margin: 12px 0 7px
+}
+
+.tarjetaServicio p {
+    font-size: 12px;
+    color: var(--gris);
+    line-height: 1.6;
+    margin: 0
+}
+
+.tarjetaServicio a {
+    display: inline-block;
+    margin-top: 15px;
+    color: #08798a;
+    font-size: 12px;
+    font-weight: 700;
+    text-decoration: none
+}
+
+.tarjetaServicio a:hover {
+    text-decoration: underline
+}
+
+.franjaContacto {
+    width: min(1180px, 90%);
+    margin: 45px auto;
+    background: #eaf6f7;
+    border: 1px solid var(--borde);
+    border-radius: 14px;
+    padding: 24px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px
+}
+
+.franjaContacto h2 {
+    font-size: 21px;
+    color: var(--azul);
+    margin: 0 0 5px
+}
+
+.franjaContacto p {
+    font-size: 13px;
+    color: var(--gris);
+    margin: 0
+}
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 11px 22px;
+    border-radius: 24px;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 700
+}
+
+.btnRelleno {
+    background: var(--turquesa);
+    color: #fff;
+    border: 0
+}
+
+.formularioSeccion {
+    display: grid;
+    grid-template-columns: .8fr 1.2fr;
+    gap: 40px;
+    align-items: start;
+    padding-bottom: 15px
+}
+
+.formularioContacto {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 14px;
+    padding: 24px;
+    border: 1px solid var(--borde);
+    border-radius: 13px;
+    box-shadow: 0 5px 20px #164b6109
+}
+
+.formularioContacto label {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+    font-size: 12px;
+    font-weight: 700;
+    color: var(--azul)
+}
+
+.formularioContacto label:nth-child(3),
+.formularioContacto label:nth-child(4),
+.formularioContacto button,
+.mensajeFormulario {
+    grid-column: 1/-1
+}
+
+.formularioContacto input,
+.formularioContacto select,
+.formularioContacto textarea {
+    width: 100%;
+    border: 1px solid var(--borde);
+    border-radius: 7px;
+    padding: 11px;
+    font: inherit;
+    font-size: 12px;
+    color: var(--texto);
+    outline-color: var(--turquesa)
+}
+
+.formularioContacto textarea {
+    resize: vertical
+}
+
+.formularioContacto button {
+    cursor: pointer
+}
+
+.mensajeFormulario {
+    font-size: 12px;
+    color: #08798a;
+    margin: 0
+}
+
+@media(max-width:800px) {
+    .rejillaServicios {
+        grid-template-columns: repeat(2, 1fr)
+    }
+
+    .formularioSeccion {
+        grid-template-columns: 1fr;
+        gap: 15px
+    }
+}
+
+@media(max-width:520px) {
+    .bannerInterno {
+        min-height: 160px
+    }
+
+    .bannerInterno h1 {
+        font-size: 29px
+    }
+
+    .rejillaServicios {
+        grid-template-columns: 1fr 1fr;
+        gap: 10px
+    }
+
+    .tarjetaServicio {
+        padding: 16px
+    }
+
+    .tarjetaServicio p {
+        min-height: 0
+    }
+
+    .franjaContacto {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 22px
+    }
+
+    .formularioContacto {
+        grid-template-columns: 1fr;
+        padding: 17px
+    }
+
+    .formularioContacto label {
+        grid-column: 1/-1
+    }
+}
+
+.tarjetaServicio ul {
+    margin: 12px 0 0;
+    padding-left: 17px;
+    font-size: 12px;
+    color: var(--gris);
+    line-height: 1.7
+}
+
+.tarjetaServicio li::marker {
+    color: var(--turquesa)
+}
+
+.tarjetaServicio h3 {
+    font-size: 17px
+}
+
+.tarjetaServicio p {
+    font-size: 13px
+}
+
+.formularioContacto button {
+    font-family: inherit
+}
+
+.mensajeFormulario {
+    font-weight: 700
+}

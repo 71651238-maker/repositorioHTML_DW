@@ -1,0 +1,126 @@
+.piePagina {
+    background: #104e65;
+    color: #fff;
+    padding: 34px clamp(20px, 5vw, 70px) 18px;
+    font-family: "Segoe UI", Verdana, sans-serif
+}
+
+.footer-superior {
+    display: grid;
+    grid-template-columns: 1.4fr 1fr 1.2fr 1.5fr;
+    gap: 30px;
+    align-items: start
+}
+
+.marcaFooter img {
+    width: 160px;
+    max-height: 58px;
+    object-fit: contain;
+    object-position: left center;
+}
+
+.marcaFooter p,
+.horarioFooter p {
+    font-size: 12px;
+    color: #d6e9ed;
+    line-height: 1.6;
+    margin: 8px 0
+}
+
+.enlacesFooter,
+.horarioFooter,
+.informacionAlumno {
+    display: flex;
+    flex-direction: column;
+    gap: 7px
+}
+
+.piePagina h3 {
+    font-size: 13px;
+    margin: 0 0 5px;
+    color: #fff
+}
+
+.enlacesFooter a {
+    color: #d6e9ed;
+    text-decoration: none;
+    font-size: 12px
+}
+
+.enlacesFooter a:hover {
+    color: #fff;
+    text-decoration: underline
+}
+
+.informacionAlumno p {
+    font-size: 12px;
+    color: #d6e9ed;
+    line-height: 1.8;
+    margin: 0
+}
+
+.areaCruz {
+    grid-column: 1/-1;
+    position: relative;
+    height: 42px;
+    margin-top: 4px
+}
+
+.cruzAnimada {
+    width: 42px;
+    height: 42px;
+    object-fit: contain;
+    position: absolute;
+    top: 0;
+    left: 0;
+    animation: moverLado 6s ease-in-out infinite alternate
+}
+
+@keyframes moverLado {
+    0% {
+        left: 0
+    }
+
+    100% {
+        left: calc(100% - 42px)
+    }
+}
+
+@media(prefers-reduced-motion:reduce) {
+    .cruzAnimada {
+        animation: none
+    }
+}
+
+.lineaDivisora {
+    border: 0;
+    border-top: 1px solid #ffffff40;
+    margin: 20px 0 13px
+}
+
+.fraseFinal {
+    text-align: center;
+    color: #e3f1f3;
+    font-size: 13px;
+    margin: 0
+}
+
+@media(max-width:700px) {
+    .footer-superior {
+        grid-template-columns: 1fr 1fr;
+        gap: 25px 18px
+    }
+
+    .marcaFooter,
+    .informacionAlumno {
+        grid-column: 1/-1
+    }
+
+    .marcaFooter img {
+        width: 145px
+    }
+
+    .piePagina {
+        padding: 28px 22px 15px
+    }
+}
